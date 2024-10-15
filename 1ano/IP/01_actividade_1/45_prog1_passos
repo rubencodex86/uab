@@ -1,0 +1,25 @@
+-> Numero Perfeito
+passo | linha | Instrução                         | Resultado      | STUFF
+1     |28     | int numero=undefined, soma=1, i=2 |                | numero=undefined, soma=1, i=2
+2     |29     | printf(...)                       | Indique número | numero=undefined, soma=1, i=2
+3     |30     | scanf(..., &numero)               | 6              | numero=6, soma=1, i=2
+4     |31     | while(i <= numero/2)              | 2<=3 True      | numero=6, soma=1, i=2
+5     |32     | if(numero%i == 0)                 | 6%2=0 True     | numero=6, soma=1, i=2
+6     |33     | soma+=i                           |                | numero=6, soma=3, i=2
+7     |34     | i++                               |                | numero=6, soma=3, i=3
+8     |31     | while(i <= numero/2)              | 3 <= 3 True    | numero=6, soma=3, i=3
+9     |32     | if(numero%i == 0                  | 6%3=0 True     | numero=6, soma=3, i=3
+10    |33     | soma+=i                           |                | numero=6, soma=6, i=3
+11    |34     | i++                               |                | numero=6, soma=6, i=4
+12    |31     | while(i <= numero/2               | 4 <= 3 False   | numero=6, soma=6, i=4
+13    |36     | if(soma==numero)                  | 6=6 true       | numero=6, soma=6, i=4
+
+
+
+
+-> Calcula N^N
+passo | linha | Instrução                         | Resultado | STUFF
+1     | 46    | int i=0, N=undefined, resultado=1 |           | i=0, N=undefined, resultado=1
+2     | 48    | N = 4                             |           | i=0, N=4, resultado=1
+3     | 49    | while(i<N)                        | 0<4 True  | i=0, N=4, resultado=1
+4     | 50    | resultado *= N                    |           | i=0, N=4, resultado=4
