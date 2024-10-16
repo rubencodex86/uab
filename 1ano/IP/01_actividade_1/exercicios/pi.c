@@ -1,4 +1,3 @@
-/*VPL*/
 #include <stdio.h>
 #include <math.h>
 
@@ -8,7 +7,6 @@ int main()
     double pi;
 
     // get k
-    printf(" ");
     scanf("%d", & k);
 
     // 2sqrt(2)/9801
@@ -62,9 +60,7 @@ int main()
 
     // calcula pi
     pi = 1 / (raiz * somatorio);
-    printf("%.17g ",pi);
-
-    return 0;
+    printf("%.16lf\n", pi);
 }
 
 
