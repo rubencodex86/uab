@@ -45,7 +45,7 @@ int main()
 	}
 }
 
-// VERSÃO PROF
+// VERSÃO Plataforma
 /*
 #include <stdio.h>
 #include <math.h>

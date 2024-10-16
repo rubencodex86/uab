@@ -80,6 +80,7 @@ int main()
 }
 */
 
+/*
 #include <stdio.h>
 
 int main()
@@ -99,12 +100,22 @@ int main()
 
 	//print 1st=5, 2nd=1, 3rd=1 //output=5+1+1
 
-	while(first>=second && second>=third) {
+	while(first>=second) {
 		second++;
-		//count++;
 		first--;
-		count++;
-		printf("%d+%d+%d\n",first,second,third);
+		//count++;
+		if(first>=second) {
+			count++;
+			printf("%d+%d+%d\n",first,second,third);	
+		} else {
+			while(second>=third)
+			third++;
+				second--;
+			}
+			if(second>=third) {
+			count++;
+			printf("%d+%d+%d\n",first,second,third);
+		}
 	}
 
 	/*	
@@ -117,8 +128,44 @@ int main()
 	}
 	*/
 	
-
+/*
 	printf("%d\n", count);
 
-}
+}*/
 
+
+// PROF - fdd!
+
+/* triplasoma.c */
+/* exemplo com 14*/
+#include <stdio.h>
+
+int main()
+{
+
+	int i, j, n, count; // também defini 3 variáveis n=first; i=second, j=third, count==count
+	printf("Escreva um numero para decompor em somas de tres parcelas.\nNumero:");
+	scanf("%d", & n); // n=14
+	count = 0; // count=0;
+
+	/* percorrer todas as possíveis permutações (apenas dois ciclos aninhados),
+	assumindo que os números mais altos aparecem sempre primeiro */
+	i = n - 2; // i=12 | acertei na formula do first
+	while((n - i) <= i *2) // 2<=24 -> porque multiplica i * 2? | avalaria numeros consecutivos em ciclos de 2 | faz duas passagens... numero de divisoes
+	{
+		/* este condicional garante que há parcelas para além desta,		
+		mais pequenas ou iguais, pelo menos duas iguais a i */
+		j = (n - i) - 1; // j=2-1=1
+		if(j > i) // 1 > 12    // reset?
+			j = i; // j=12 
+		while((n - i - j) <= j) //14-12-12=0 <= 12.... fuck! Bem feito... mas eu nunca chegaria lá 
+		{
+			/* encontrado i+j+(n-i-j), imprimir */
+			printf(" %d+%d+%d\n", i, j, n - i - j);// i=12, j=12, 14-12-12c=0
+			count++; //=1
+			j--; //=11
+		}
+		i--;//=11
+	}
+	printf("Numero de somas: %d\n", count);
+}
