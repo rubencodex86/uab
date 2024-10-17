@@ -1,3 +1,5 @@
+/* Não funciona. Feito em pi.c */
+
 #include <math.h>
 #include <stdio.h>
 
