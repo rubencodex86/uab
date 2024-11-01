@@ -18,5 +18,21 @@ Notas:
 
 int main()
 {
-	int
+	int a, b, c;
+
+	printf("Inroduza os coeficientes\n(Formato: a, b , c)$ ");
+
+/* Coeficientes nulos */	
+	/*
+	if(a==0 || b==0 || c==0)
+		printf("ERRO: O(s) queficiente(s) nao devem ser nulos!");
+	*/
+	/* outra forma */
+	while(a==0 || b==0 || c==0)
+		printf("ERRO: O(s) queficiente(s) nao devem ser nulos!\"Inroduza os coeficientes\n(Formato: a, b , c)$ ");
+	
+
+
+
+
 }
